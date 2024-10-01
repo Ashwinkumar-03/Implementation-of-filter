@@ -378,17 +378,53 @@ plt.show()
 
 ```
 ii) Using Laplacian Operator
-```Python
+```
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
 
+# Load the original image in grayscale
+image = cv2.imread('vijay.jpg', cv2.IMREAD_GRAYSCALE)
 
+# Apply Gaussian blur to reduce noise
+blurred_image = cv2.GaussianBlur(image, (3, 3), 0)
 
+# Apply the Laplacian operator using OpenCV
+laplacian_image = cv2.Laplacian(blurred_image, cv2.CV_64F, ksize=3)
 
+# Take absolute values and normalize the Laplacian image to 8-bit
+laplacian_image = np.absolute(laplacian_image)
+laplacian_image = np.clip(laplacian_image, 0, 255).astype(np.uint8)
+
+# Add the original image and the Laplacian image to get the final output
+sharpened_image = cv2.add(image, laplacian_image)
+
+# Display the images side by side using Matplotlib
+plt.figure(figsize=(12, 4))
+
+plt.subplot(1, 3, 1)
+plt.imshow(image, cmap='gray')
+plt.title('Original Image')
+plt.axis('off')
+
+plt.subplot(1, 3, 2)
+plt.imshow(laplacian_image, cmap='gray')
+plt.title('Laplacian Filtered Image')
+plt.axis('off')
+
+plt.subplot(1, 3, 3)
+plt.imshow(sharpened_image, cmap='gray')
+plt.title('Sharpened Image')
+plt.axis('off')
+
+plt.tight_layout()
+plt.show()
 
 ```
 
 ## OUTPUT:
 ### 1. Smoothing Filters
-</br>
+
 
 i) Averaging Filter
 
@@ -407,18 +443,13 @@ iv) Using Median Filter
 
 
 ### 2. Sharpening Filters
-</br>
-
 i) Using Laplacian Kernal
 ![image](https://github.com/user-attachments/assets/175323da-6066-4686-b98a-a8c8e152a581)
 
 
 ii) Using Laplacian Operator
-</br>
-</br>
-</br>
-</br>
-</br>
+![image](https://github.com/user-attachments/assets/4501d9da-0fa5-4a51-adac-948cd9ef4cb5)
+
 
 ## Result:
 Thus the filters are designed for smoothing and sharpening the images in the spatial domain.
