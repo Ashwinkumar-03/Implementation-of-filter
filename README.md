@@ -24,9 +24,10 @@ Define a Laplacian kernel (kernel3) and perform 2D convolution filtering on the 
 Apply the Laplacian operator to the RGB image (image2) using OpenCV's cv2.Laplacian function.Display the resulting image (new_image) titled 'Laplacian Operator' using Matplotlib's imshow function.
 
 ## Program:
-### Developed By   :
-### Register Number:
-</br>
+```
+Developed By   : ASHWIN KUMAR S
+Register No : 212222240013
+```
 
 ### 1. Smoothing Filters
 
@@ -94,9 +95,6 @@ plt.axis('off')
 
 plt.tight_layout()
 plt.show()
-
-
-
 
 ```
 ii) Weighted Averaging Filter
@@ -175,7 +173,6 @@ plt.axis('off')
 plt.tight_layout()
 plt.show()
 
-
 ```
 iii) Gaussian Filter
 ```
@@ -231,10 +228,6 @@ plt.axis('off')
 
 plt.tight_layout()
 plt.show()
-
-
-
-
 
 ```
 iv)Using Median Filter
@@ -302,7 +295,6 @@ plt.axis('off')
 
 plt.tight_layout()
 plt.show()
-
 
 ```
 
@@ -374,7 +366,6 @@ plt.axis('off')
 
 plt.tight_layout()
 plt.show()
-
 
 ```
 ii) Using Laplacian Operator
