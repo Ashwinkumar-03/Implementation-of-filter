@@ -1,3 +1,4 @@
+# Exp-5
 # Implementation of filter
 ## Aim:
 To implement filters for smoothing and sharpening the images in the spatial domain.
@@ -24,10 +25,10 @@ Define a Laplacian kernel (kernel3) and perform 2D convolution filtering on the 
 Apply the Laplacian operator to the RGB image (image2) using OpenCV's cv2.Laplacian function.Display the resulting image (new_image) titled 'Laplacian Operator' using Matplotlib's imshow function.
 
 ## Program:
-```
-Developed By   : ASHWIN KUMAR S
-Register No : 212222240013
-```
+
+## Developed By   : ASHWIN KUMAR S
+## Register No : 212222240013
+
 
 ### 1. Smoothing Filters
 
